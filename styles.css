@@ -43,6 +43,16 @@ header.solid{background:rgba(255,255,255,.95);backdrop-filter:blur(12px);box-sha
 .logo{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-weight:800;font-size:1.3rem;color:#fff;transition:color .35s}
 header.scrolled .logo,header.solid .logo{color:var(--navy)}
 .logo .mark{width:38px;height:38px;border-radius:10px;flex:0 0 auto;background:linear-gradient(135deg,var(--azure),var(--blue));display:grid;place-items:center;color:#fff;font-size:1.05rem;font-weight:800;box-shadow:0 8px 20px -6px rgba(21,102,214,.7)}
+.logo-img{height:42px;width:auto;border-radius:9px;display:block;flex:0 0 auto}
+.brand{display:flex;flex-direction:column;line-height:1.06;font-family:var(--display)}
+.brand b{font-weight:800;font-size:.98rem;white-space:nowrap;color:currentColor}
+.brand i{font-style:normal;font-weight:700;font-size:.6rem;letter-spacing:.16em;color:var(--azure);text-transform:uppercase;white-space:nowrap}
+.certs{display:flex;align-items:center;gap:.55rem;margin-right:.3rem}
+.cert{height:40px;width:auto;border-radius:8px;background:#fff;padding:4px;box-shadow:0 6px 16px -8px rgba(0,0,0,.35)}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:200;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.55);transition:transform .25s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid #25D366;opacity:0;pointer-events:none;animation:wapulse 2.2s infinite}
+@keyframes wapulse{0%{transform:scale(.92);opacity:.7}100%{transform:scale(1.5);opacity:0}}
 .nav-links{display:flex;align-items:center;gap:2.1rem}
 .nav-links a{color:rgba(255,255,255,.9);font-weight:500;font-size:.95rem;position:relative;transition:color .3s}
 header.scrolled .nav-links a,header.solid .nav-links a{color:var(--ink)}
@@ -239,6 +249,7 @@ footer ul a:hover{color:var(--azure)}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .g-grid{grid-template-columns:repeat(2,1fr)}
   .about-float{right:16px}
+  .certs{display:none}
 }
 @media(max-width:680px){
   .nav-links{position:fixed;top:0;right:-100%;height:100vh;width:78%;max-width:330px;background:var(--navy);flex-direction:column;align-items:flex-start;justify-content:center;padding:3rem 2rem;gap:1.6rem;transition:right .4s;box-shadow:-20px 0 60px rgba(0,0,0,.4)}
